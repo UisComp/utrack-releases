@@ -1,0 +1,35 @@
+{
+  "version": "20.10.0",
+  "defaultLanguage": "ar",
+  "announcement": {
+    "enabled": false,
+    "ar": "",
+    "en": ""
+  },
+  "links": {
+    "appStore": {
+      "enabled": true,
+      "url": "https://apps.apple.com/app/id6450457205"
+    },
+    "googlePlay": {
+      "enabled": true,
+      "url": "https://play.google.com/store/apps/details?id=com.uis.uisapprovalsystem"
+    },
+    "testFlight": {
+      "enabled": false,
+      "url": ""
+    },
+    "apk": {
+      "enabled": false,
+      "url": "https://github.com/UisComp/utrack-releases/releases/latest/download/utrack.apk"
+    }
+  },
+  "sections": {
+    "features": true,
+    "screens": false
+  },
+  "contact": {
+    "email": "",
+    "website": ""
+  }
+}
