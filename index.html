@@ -1,104 +1,185 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>U-Track — تقارير وموافقات شركتك</title>
   <meta name="description" content="U-Track: approvals, invoices, accounts and live sales reports for your company and its branches — on iPhone, iPad and Android, in Arabic, English and French.">
   <meta property="og:title" content="U-Track">
   <meta property="og:description" content="Approvals and live sales reports for your company in one app — App Store, Google Play and direct APK.">
   <meta property="og:image" content="https://uiscomp.github.io/utrack-releases/assets/img/social_en.jpg">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#121a45">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b1035">
   <link rel="icon" type="image/png" href="assets/img/icon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/landing.css">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap">
-      <a class="brand" href="#"><img src="assets/img/icon.png" alt="" width="36" height="36"><span>U-Track</span></a>
-      <nav class="nav">
+  <a class="skip" href="#features" data-i18n="skip"></a>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="U-Track">
+        <img src="assets/img/icon.png" alt="" width="34" height="34">
+        <span>U-Track</span>
+      </a>
+      <nav class="links" aria-label="Sections">
         <a href="#features" data-i18n="navFeatures"></a>
-        <a href="#screens" data-i18n="navScreens"></a>
+        <a href="#screens" data-i18n="navScreens" data-section="screens"></a>
+        <a href="#updates" data-i18n="navUpdates"></a>
         <a href="#download" data-i18n="navDownload"></a>
       </nav>
-      <button class="lang" id="lang" type="button" aria-label="Language">EN</button>
+      <div class="nav-actions">
+        <button class="lang" id="lang" type="button" aria-label="Language">EN</button>
+        <a class="btn btn-primary btn-sm" href="#download" data-i18n="navCta"></a>
+      </div>
     </div>
   </header>
 
   <div class="notice" id="notice" hidden></div>
 
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <span class="pill"><span class="dot"></span><span data-i18n="heroPill"></span> <span id="ver"></span></span>
-        <h1 data-i18n="heroTitle"></h1>
-        <p class="lead" data-i18n="heroLead"></p>
-        <div class="stores" id="heroStores"></div>
+  <main id="top">
+    <!-- ───────────────────────────── Hero ───────────────────────────── -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+        <span class="grid-lines"></span>
       </div>
-      <div class="hero-phone"><img id="heroShot" src="assets/img/hero_ar.webp" alt="" width="900" height="1956"></div>
-    </div>
-  </section>
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <span class="pill reveal"><span class="pulse"></span><span data-i18n="heroPill"></span> <b id="ver"></b></span>
+          <h1 class="reveal" style="--d:.05s"><span data-i18n="heroTitleA"></span> <span class="grad" data-i18n="heroTitleB"></span></h1>
+          <p class="lead reveal" style="--d:.12s" data-i18n="heroLead"></p>
+          <div class="cta-row reveal" style="--d:.18s">
+            <a class="btn btn-primary btn-lg" id="smartCta" href="#download">
+              <span class="ic" id="smartIcon"></span><span id="smartLabel"></span>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#screens" data-i18n="heroSecondary" data-section="screens"></a>
+          </div>
+          <div class="stores-mini reveal" style="--d:.24s" id="heroStores"></div>
+          <ul class="stats reveal" style="--d:.3s" id="stats"></ul>
+        </div>
 
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="head">
-        <div class="eyebrow" data-i18n="featEyebrow"></div>
-        <h2 data-i18n="featTitle"></h2>
-        <p data-i18n="featLead"></p>
+        <div class="hero-visual reveal" style="--d:.15s">
+          <div class="phone float">
+            <span class="notch"></span>
+            <img id="heroShot" src="assets/img/hero_ar.webp" alt="" width="900" height="1956">
+          </div>
+          <div class="glass chip c1"><span class="dot ok"></span><span data-i18n="chipApprovals"></span></div>
+          <div class="glass chip c2"><span class="dot live"></span><span data-i18n="chipLive"></span></div>
+          <div class="glass qr-card c3">
+            <img src="assets/qr/page.svg" alt="" width="92" height="92">
+            <span data-i18n="scanHint"></span>
+          </div>
+        </div>
       </div>
-      <div class="grid" id="featGrid"></div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block screens" id="screens">
-    <div class="wrap">
-      <div class="head">
-        <div class="eyebrow" data-i18n="scrEyebrow"></div>
-        <h2 data-i18n="scrTitle"></h2>
-        <p data-i18n="scrLead"></p>
+    <!-- ─────────────────────────── Features ─────────────────────────── -->
+    <section class="block" id="features">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="eyebrow" data-i18n="featEyebrow"></span>
+          <h2 data-i18n="featTitle"></h2>
+          <p data-i18n="featLead"></p>
+        </header>
+        <div class="bento" id="featGrid"></div>
       </div>
-      <div class="strip" id="strip"></div>
-      <div class="strip-nav">
-        <button class="round" id="prev" type="button" aria-label="Previous">‹</button>
-        <button class="round" id="next" type="button" aria-label="Next">›</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block" id="download">
-    <div class="wrap">
-      <div class="head">
-        <div class="eyebrow" data-i18n="dlEyebrow"></div>
-        <h2 data-i18n="dlTitle"></h2>
-        <p data-i18n="dlLead"></p>
+    <!-- ──────────────────────────── Screens ─────────────────────────── -->
+    <section class="block alt" id="screens">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="eyebrow" data-i18n="scrEyebrow"></span>
+          <h2 data-i18n="scrTitle"></h2>
+          <p data-i18n="scrLead"></p>
+        </header>
+        <div class="tabs reveal" role="tablist" id="tabs">
+          <button role="tab" type="button" data-tab="modern" data-i18n="tabModern"></button>
+          <button role="tab" type="button" data-tab="classic" data-i18n="tabClassic"></button>
+        </div>
+        <div class="showcase reveal">
+          <button class="round prev" id="prev" type="button" aria-label="Previous">‹</button>
+          <div class="show-stage">
+            <div class="phone big">
+              <span class="notch"></span>
+              <div class="slides" id="slides"></div>
+            </div>
+            <p class="caption" id="caption" aria-live="polite"></p>
+            <div class="dots" id="dots"></div>
+          </div>
+          <button class="round next" id="next" type="button" aria-label="Next">›</button>
+        </div>
       </div>
-      <div class="dl" id="dlCards"></div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block screens">
-    <div class="wrap">
-      <div class="head">
-        <div class="eyebrow" data-i18n="trustEyebrow"></div>
-        <h2 data-i18n="trustTitle"></h2>
+    <!-- ──────────────────────────── Updates ─────────────────────────── -->
+    <section class="block" id="updates">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="eyebrow" data-i18n="updEyebrow"></span>
+          <h2 data-i18n="updTitle"></h2>
+          <p data-i18n="updLead"></p>
+        </header>
+        <ol class="steps" id="steps"></ol>
       </div>
-      <div class="trust" id="trust"></div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="wrap">
-      <span>© <span id="year"></span> United Integrated Solutions · U-Track</span>
+    <!-- ─────────────────────────── Download ─────────────────────────── -->
+    <section class="block alt" id="download">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="eyebrow" data-i18n="dlEyebrow"></span>
+          <h2 data-i18n="dlTitle"></h2>
+          <p data-i18n="dlLead"></p>
+        </header>
+        <div class="dl" id="dlCards"></div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── Security ─────────────────────────── -->
+    <section class="block" id="security">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="eyebrow" data-i18n="trustEyebrow"></span>
+          <h2 data-i18n="trustTitle"></h2>
+        </header>
+        <div class="trust" id="trust"></div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────── CTA ───────────────────────────── -->
+    <section class="cta-band">
+      <div class="wrap cta-in reveal">
+        <div>
+          <h2 data-i18n="ctaTitle"></h2>
+          <p data-i18n="ctaLead"></p>
+          <div class="stores-mini" id="ctaStores"></div>
+        </div>
+        <div class="cta-qr">
+          <img src="assets/qr/page.svg" alt="" width="132" height="132">
+          <span data-i18n="scanHint"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <div class="foot-brand">
+        <img src="assets/img/icon.png" alt="" width="28" height="28">
+        <span>© <span id="year"></span> United Integrated Solutions · U-Track</span>
+      </div>
       <span id="contact"></span>
     </div>
   </footer>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true"><img alt=""></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot"><img alt=""></div>
 
   <script src="assets/site.js"></script>
 </body>
