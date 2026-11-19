@@ -20,7 +20,7 @@
       "url": ""
     },
     "apk": {
-      "enabled": false,
+      "enabled": true,
       "url": "https://github.com/UisComp/utrack-releases/releases/latest/download/utrack.apk"
     }
   },
